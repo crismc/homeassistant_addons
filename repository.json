@@ -1,5 +1,5 @@
 {
     "name": "Home Assistant Add-ons:",
-    "url": "http://192.168.0.2:3000/personal/HomeAssistant_I2C_OLED",
+    "url": "http://192.168.0.2:3000/personal/HomeAssistant_Addons",
     "maintainer": "Chris Churchill <chris@serva.co.uk>"
 }
