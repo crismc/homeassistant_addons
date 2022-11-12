@@ -11,6 +11,7 @@ Enables an I2C OLED display for Pi 4.
 
 Special thanks to [Gareth Cheyne](https://github.com/garethcheyne/HomeAssistant) for his intial version of this project.
 After the removal of GPIO support from Home Assistant, the referenced addon no longer worked for me, so I took the initial project apart, and smashed it together with the Adafruit I2C libraries removing the GPIO requirements.
+Additionally, the original build didn't work on 64bit versions of the Raspberry Pi. The Dockerfile has been minimised to leverage the default Alpine core as only I2C python libraries are required.
 
 This addon includes a splash screen that will show you the current version of the Core OS, and HA, and will be presented with an asterisk if either require an upgrade. You are also able to set the duration of the slide rotation, and what slides you wish to present.
 
