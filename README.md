@@ -4,6 +4,11 @@ Add-ons for Home Assistant, allow you to extend the functionality around your Ho
 
 Add-ons can be installed and configured via the Home Assistant frontend on systems that have installed Home Assistant.
 
+<a href="https://www.buymeacoffee.com/jedimeat" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
+[![release][release-badge]][release-url]
+![downloads][downloads-badge]
+
 ## Install this Repository.
 Easiest way to install these addons is to add the repository to Home Assistant:
 1. Go to Settings > Add-ons
@@ -17,3 +22,9 @@ Easiest way to install these addons is to add the repository to Home Assistant:
 ### I2C OLED
 In Development
 Project for displaying onto an I2C OLED 0.91" 128x32 on a RPi4
+
+
+<!-- Badges -->
+[release-badge]: https://img.shields.io/github/v/release/crismc/homeassistant_addons?style=flat-square
+[downloads-badge]: https://img.shields.io/github/downloads/crismc/homeassistant_addons/total?style=flat-square
+[release-url]: https://github.com/crismc/homeassistant_addons/releases
