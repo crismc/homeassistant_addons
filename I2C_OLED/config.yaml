@@ -1,6 +1,6 @@
 name: "I2C OLED Display"
 description: "This addon lets you display to your I2C OLED for a Pi 4 with the SSD1306 OLED."
-version: "1.0.3"
+version: "1.0.0"
 slug: "i2c_oled_display"
 stage: experimental
 startup: services
