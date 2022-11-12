@@ -53,6 +53,20 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 3. Check the "Log" and see if there are any errors.
 4. Your OLED should be displaying.
 
+## Configuration Options
+| Name                 | Type    | Requirement  | Description                                            | Default             |
+| ---------------------| ------- | ------------ | -------------------------------------------------------| ------------------- |
+| Temperature_Unit     | string  | **Required** | Display the CPU temperature in C or F                  | `C`                 |
+| Default_Duration     | int     | **Required** | How long in seconds to display each screen by default. Ignored if specified on specific screen  | `10`                |
+| Show_Welcome_Screen  | boolean | **Required** | Show the animated Welcome to `hostname` screen         | `true`              |
+| Show_Splash_Screen  | boolean | **Required** | Show the Home Assistant core and version screen         | `true`              |
+| Show_Network_Screen  | boolean | **Required** | Show the Network Information screen         | `true`              |
+| Show_CPU_Screen  | boolean | **Required** | Show the CPU Information screen         | `true`              |
+| Show_Memory_Screen  | boolean | **Required** | Show the Memory Information screen         | `true`              |
+| Show_Storage_Screen  | boolean | **Required** | Show the Storage Information screen         | `true`              |
+| *_Screen_Limit    | int | **Optional** | Number of times to show the screen in the cycle. Once limit is reached, display will no longer appear                            | null              |
+| *_Screen_Duration | int | **Optional** | How long in seconds to display the screen              | `10`              |
+
 ## Some Teaser Screenshots.
 ### Splash Screen
 ![Splash Screen][splash-screen-url]
@@ -64,6 +78,8 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 ![Storage Stats][storage-stats-url]
 ### Network Stats
 ![Network Stats][network-stats-url]
+
+
 
 
 <!-- Badges -->
