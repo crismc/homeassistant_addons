@@ -7,9 +7,8 @@ RUN \
     python3 \
     py3-pip \
     py3-pillow \
-    py3-smbus
-
-RUN pip install configparser
+    py3-smbus \
+    py3-configparser
 
 COPY /python* /I2C_OLED/
 
