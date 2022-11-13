@@ -3,13 +3,15 @@ FROM $BUILD_FROM
 
 #install environment
 RUN \
-    apk add --no-cache --virtual \
+    apk add --no-cache \
     git \
     python3 \
-    py-pip
+    py-pip \
+    py3-flask \
+    py3-flask-cors \
+    py3-jinja2
 
-RUN pip install flask flask-cors Jinja2 --upgrade
-RUN git clone git@github.com:crismc/flashforge-api.git /flashforge
+RUN git clone https://github.com/crismc/flashforge-api.git /flashforge
     
 COPY run.sh /
 WORKDIR /data
