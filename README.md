@@ -23,8 +23,14 @@ Easiest way to install these addons is to add the repository to Home Assistant:
 In Development
 Project for displaying onto an I2C OLED 0.91" 128x32 on a RPi4
 
+### FlashForge
+Fork of [johnpdowling][original-addon-url] Flashforge Finder API add-on
+Exposing Flashforge 3D printers as API endpoints to consume as RESTful sensors
+
 
 <!-- Badges -->
 [release-badge]: https://img.shields.io/github/v/release/crismc/homeassistant_addons?style=flat-square
 [downloads-badge]: https://img.shields.io/github/downloads/crismc/homeassistant_addons/total?style=flat-square
 [release-url]: https://github.com/crismc/homeassistant_addons/releases
+
+[original-addon-url]: https://community.home-assistant.io/t/flashforge-finder-api-add-on/118710

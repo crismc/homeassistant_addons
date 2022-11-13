@@ -1,0 +1,22 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Community Hass.io Add-ons: FlashForge-API Server
+# Runs the FlashForge flask server
+# ==============================================================================
+set -e
+CONFIG_PATH=/data/options.json
+
+# configs
+LOCAL_ONLY=$(jq --raw-output '.local_only' $CONFIG_PATH)
+WAIT_TIME=10
+
+HOST="--host=0.0.0.0"
+if [ "$LOCAL_ONLY" == true ]
+then
+HOST=""
+fi
+
+sleep "$WAIT_TIME"
+
+# Run FlashForge
+(cd /flashforge/api && FLASK_APP=webapi.py flask run $HOST --port=5000)
