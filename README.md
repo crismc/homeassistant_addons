@@ -25,7 +25,7 @@ Project for displaying onto an I2C OLED 0.91" 128x32 on a RPi4
 
 ### FlashForge
 Fork of [johnpdowling][original-addon-url] Flashforge Finder API add-on
-Exposing Flashforge 3D printers as API endpoints to consume as RESTful sensors
+Runs an API server to expose the Flashforge 3D printers as API endpoints to consume as RESTful sensors
 
 
 <!-- Badges -->
