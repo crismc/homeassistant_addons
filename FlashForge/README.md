@@ -15,7 +15,7 @@ http://{homeassistant_ip}:{fff-api_port}/{printer_ip}/{info|head-location|temp|p
 ## Usage
 1) Install the addon and configure the port that the API will be served on. Default is 8899.
 
-2) Start the addon. Information about your printer will be available at http://{homeassistant_ip}:{fff-api_port}/{printer_ip}/{info|head-location|temp|progress|status|set-temp|set-light}
+2) Start the addon. Information about your printer will be available at http://127.0.0.1:{addon_port}/{printer_ip}/{info|head-location|temp|progress|status|set-temp|set-light}
 
 3) Configure RESTful sensors & switches in HA as necessary
 
@@ -92,17 +92,25 @@ http://{homeassistant_ip}:{fff-api_port}/{printer_ip}/{info|head-location|temp|p
   name: "FlashForge Temp"
   resource: http://127.0.0.1:8899/{printer_ip}/temp
   json_attributes:
-      - TargetTemperature
-      - Temperature
-  value_template: "{{ value_json.Temperature }}"
+      - ExtruderTargetTemperature
+      - ExtruderTemperature
+      - BedTargetTemperature
+      - BedTemperature
+  value_template: "{{ value_json.ExtruderTemperature }}"
 - platform: template
   sensors:
-    targettemperature:
-      friendly_name: "TargetTemperature"
-      value_template: "{{ state_attr('sensor.flashforge_temp', 'TargetTemperature') }}"
-    temperature:
-      friendly_name: "Temperature"
-      value_template: "{{ state_attr('sensor.flashforge_temp', 'Temperature') }}"
+    extrudertargettemperature:
+      friendly_name: "ExtruderTargetTemperature"
+      value_template: "{{ state_attr('sensor.flashforge_temp', 'ExtruderTargetTemperature') }}"
+    extrudertemperature:
+      friendly_name: "ExtruderTemperature"
+      value_template: "{{ state_attr('sensor.flashforge_temp', 'ExtruderTemperature') }}"
+    bedtargettemperature:
+      friendly_name: "BedTargetTemperature"
+      value_template: "{{ state_attr('sensor.flashforge_temp', 'BedTargetTemperature') }}"
+    bedtemperature:
+      friendly_name: "BedTemperature"
+      value_template: "{{ state_attr('sensor.flashforge_temp', 'BedTemperature') }}"
 ```
 
 ### Progress
