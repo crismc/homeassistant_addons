@@ -1,25 +1,60 @@
 # I2C OLED Display
 
-Enables an I2C OLED display for Pi 4.
+Enables 128x32 pixel OLED for Raspberry Pi (both 32 and 64bit).
 
 <a href="https://www.buymeacoffee.com/jedimeat" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/white_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 [![release][release-badge]][release-url]
 ![downloads][downloads-badge]
+<br>
+<br>
+
+## Some Teaser Screenshots.
+| Welcome | CPU Stats | RAM Stats | Storage Stats | Network Stats | 
+|-----------|-----------|-----------|---------------|---------------|
+| ![CPU Stats][welcome-url] | ![CPU Stats][cpu-stats-url] | ![RAM Stats][ram-stats-url] | ![Storage Stats][storage-stats-url] | ![Network Stats][network-stats-url]
+
+<br>
+
+Also available as a stand alone service outside of Home Assistant which can be accessed from the core repository:
+
+[rpi_i2c_oled](https://github.com/crismc/rpi_i2c_oled)
+<br>
+<br>
+
+Adafruit Python SSD1306
+=======================
 
 **This addon leverages the original [Adafruit Python SSD1306](https://github.com/adafruit/Adafruit_Python_SSD1306) and [GPIO](https://github.com/adafruit/Adafruit_Python_GPIO) libraries, which have been deprecated. However, I have taken the nessassary parts out of this and bundled them into this I2C module avoiding the need for GPIO and relying on the Raspery Pi 4's I2C setup.**
 
+Original Repo: https://github.com/adafruit/Adafruit_Python_SSD1306
+
+Originally designed specifically to work with the Adafruit SSD1306-based OLED displays ----> https://www.adafruit.com/categories/98
+
+Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
+<br>
+<br>
+
+[Gareth Cheyne](https://github.com/garethcheyne/HomeAssistant) & Ultronics
+=====
 Special thanks to [Gareth Cheyne](https://github.com/garethcheyne/HomeAssistant) for his intial version of this project.
+
 After the removal of GPIO support from Home Assistant, the referenced addon no longer worked for me, so I took the initial project apart, and smashed it together with the Adafruit I2C libraries removing the GPIO requirements.
+
 Additionally, the original build didn't work on 64bit versions of the Raspberry Pi. The Dockerfile has been minimised to leverage the default Alpine core as only I2C python libraries are required.
 
 This addon includes a splash screen that will show you the current version of the Core OS, and HA, and will be presented with an asterisk if either require an upgrade. You are also able to set the duration of the slide rotation, and what slides you wish to present.
 
 I also modified the configuration allowing to set the time each screen appears for, along with a limit to only show a screen x number of times.
+<br>
+<br>
 
 ### NB, This addon will take some time to initially load as it has to build some python libraries. 
+<br>
+<br>
+
 ## Hardware Setup
-You can use 0.91 Inch 128X32 I2C module, as long as it is registered on /dev/i2c-1 which is the Rasperry Pi 4 default.
+You can use 0.91 Inch 128X32 I2C module, as long as it is registered on /dev/i2c-1 which is the Rasperry Pi default.
 
 I purchased this [MakerHawk I2C OLED Display Module I2C Screen Module 0.91" 128X32 I2C](https://www.amazon.co.uk/gp/product/B07BDFXFRK/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1)
 
@@ -68,20 +103,6 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 | *_Screen_Limit    | int | **Optional** | Number of times to show the screen in the cycle. Once limit is reached, display will no longer appear                            | null              |
 | *_Screen_Duration | int | **Optional** | How long in seconds to display the screen              | `10`              |
 
-## Some Teaser Screenshots.
-### Splash Screen
-![Splash Screen][splash-screen-url]
-### CPU Stats
-![CPU Stats][cpu-stats-url]
-### RAM Stats
-![RAM Stats][ram-stats-url]
-### Storage Stats
-![Storage Stats][storage-stats-url]
-### Network Stats
-![Network Stats][network-stats-url]
-
-
-
 
 <!-- Badges -->
 [release-badge]: https://img.shields.io/github/v/release/crismc/homeassistant_addons?style=flat-square
@@ -94,8 +115,9 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 
 [home-assistant-docs-url]: https://www.home-assistant.io/common-tasks/os#enable-i2c-with-an-sd-card-reader
 [hassosconfigurator-url]: https://github.com/adamoutler/HassOSConfigurator/tree/main/Pi4EnableI2C
-[splash-screen-url]: https://github.com/garethcheyne/HomeAssistant/raw/main/UCTronics_OLED_Display_Python/python/img/examples/splash.png?raw=true
-[cpu-stats-url]: https://github.com/garethcheyne/HomeAssistant/raw/main/UCTronics_OLED_Display_Python/python/img/examples/cpu.png?raw=true
-[ram-stats-url]: https://github.com/garethcheyne/HomeAssistant/raw/main/UCTronics_OLED_Display_Python/python/img/examples/memory.png?raw=true
-[storage-stats-url]: https://github.com/garethcheyne/HomeAssistant/raw/main/UCTronics_OLED_Display_Python/python/img/examples/storage.png?raw=true
-[network-stats-url]: https://github.com/garethcheyne/HomeAssistant/raw/main/UCTronics_OLED_Display_Python/python/img/examples/network.png?raw=true
+[release-url]: https://github.com/crismc/rpi_i2c_oled/releases
+[welcome-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/welcome.png?raw=true
+[cpu-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/cpu.png?raw=true
+[ram-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/memory.png?raw=true
+[storage-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/storage.png?raw=true
+[network-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/network.png?raw=true

@@ -1,15 +1,10 @@
 name: "I2C OLED Display"
-description: "This addon lets you display to your I2C OLED for a Pi 4 with the SSD1306 OLED."
+description: "This addon lets you display to your I2C OLED for a Raspberry Pi with an I2C SSD1306 0.91" 128x32 OLED."
 version: "1.0.0"
 slug: "i2c_oled_display"
-stage: experimental
 startup: services
-log_level: info
 boot: manual
-full_access: true
 hassio_api: true
-auth_api: true
-host_network: true
 init: false
 arch:
   - aarch64
@@ -17,39 +12,63 @@ arch:
   - armhf
   - armv7
   - i386
+
 devices:
   - "/dev/i2c-1"
-privileged:
-  - SYS_ADMIN
+
 options:
+  HASSIO: true
   Temperature_Unit: "C"
   Default_Duration: 10
+
   Show_Welcome_Screen: true
-  Welcome_Screen_Limit: 2
   Welcome_Screen_Duration: 5
+  Welcome_Screen_Limit: 2
+
   Show_Splash_Screen: true
   Splash_Screen_Duration: 5
+  Splash_Screen_Limit: 0
+
   Show_Network_Screen: true
-  Show_Network_Duration: 10
+  Network_Screen_Duration: 10
+  Network_Screen_Limit: 0
+
   Show_CPU_Screen: true
   CPU_Screen_Duration: 5
+  CPU_Screen_Limit: 0
+
   Show_Memory_Screen: true
   Memory_Screen_Duration: 5
+  Memory_Screen_Limit: 0
+
   Show_Storage_Screen: true
   Storage_Screen_Duration: 5
+  Storage_Screen_Limit: 0
+
 schema:
   Temperature_Unit: "list(C|F)?"
   Default_Duration: int
+
   Show_Welcome_Screen: bool
-  Welcome_Screen_Limit: int?
   Welcome_Screen_Duration: int?
+  Welcome_Screen_Limit: int?
+
   Show_Splash_Screen: bool
   Splash_Screen_Duration: int?
+  Splash_Screen_Limit: int?
+
   Show_Network_Screen: bool
-  Show_Network_Duration: int?
+  Network_Screen_Duration: int?
+  Network_Screen_Limit: int?
+
   Show_CPU_Screen: bool
   CPU_Screen_Duration: int?
+  CPU_Screen_Limit: int?
+
   Show_Memory_Screen: bool
   Memory_Screen_Duration: int?
+  Memory_Screen_Limit: int?
+
   Show_Storage_Screen: bool
   Storage_Screen_Duration: int?
+  Storage_Screen_Limit: int?
