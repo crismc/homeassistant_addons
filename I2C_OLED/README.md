@@ -92,6 +92,7 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 ## Configuration Options
 | Name                 | Type    | Requirement  | Description                                            | Default             |
 | ---------------------| ------- | ------------ | -------------------------------------------------------| ------------------- |
+| I2C_bus     | int  | **Required** | The bus number of the targeted i2c device (/dev/i2c-[ number ])                  | `1`                 |
 | Temperature_Unit     | string  | **Required** | Display the CPU temperature in C or F                  | `C`                 |
 | Default_Duration     | int     | **Required** | How long in seconds to display each screen by default. Ignored if specified on specific screen  | `10`                |
 | Show_Welcome_Screen  | boolean | **Required** | Show the animated Welcome to `hostname` screen         | `true`              |

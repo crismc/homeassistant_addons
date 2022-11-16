@@ -1,6 +1,6 @@
 name: "I2C OLED Display"
 description: "This addon lets you display to your I2C OLED for a Raspberry Pi with an I2C SSD1306 0.91\" 128x32 OLED."
-version: "1.0.0"
+version: "1.0.1"
 slug: "i2c_oled_display"
 startup: services
 boot: manual
@@ -12,14 +12,37 @@ arch:
   - armhf
   - armv7
   - i386
-
+map:
+  - media:rw
+full_access: true
 devices:
-  - "/dev/i2c-1"
-
+  - /dev/i2c-0
+  - /dev/i2c-1
+  - /dev/i2c-2
+  - /dev/i2c-3
+  - /dev/i2c-4
+  - /dev/i2c-5
+  - /dev/i2c-6
+  - /dev/i2c-7
+  - /dev/i2c-8
+  - /dev/i2c-9
+  - /dev/i2c-10
+  - /dev/i2c-11
+  - /dev/i2c-12
+  - /dev/i2c-13
+  - /dev/i2c-14
+  - /dev/i2c-15
+  - /dev/i2c-16
+  - /dev/i2c-17
+  - /dev/i2c-18
+  - /dev/i2c-19
+  - /dev/i2c-20
 options:
-  HASSIO: true
-  Temperature_Unit: "C"
   Default_Duration: 10
+  I2C_bus: 1
+  Screenshot: '/media'
+
+  Debug_Mode: false
 
   Show_Welcome_Screen: true
   Welcome_Screen_Duration: 5
@@ -34,6 +57,7 @@ options:
   Network_Screen_Limit: 0
 
   Show_CPU_Screen: true
+  Temperature_Unit: "C"
   CPU_Screen_Duration: 5
   CPU_Screen_Limit: 0
 
@@ -46,8 +70,10 @@ options:
   Storage_Screen_Limit: 0
 
 schema:
-  Temperature_Unit: "list(C|F)?"
+  I2C_bus: "int(0,20)"
   Default_Duration: int
+  Screenshot: "str?"
+  Debug_Mode: bool
 
   Show_Welcome_Screen: bool
   Welcome_Screen_Duration: int?
@@ -62,6 +88,7 @@ schema:
   Network_Screen_Limit: int?
 
   Show_CPU_Screen: bool
+  Temperature_Unit: "list(C|F)?"
   CPU_Screen_Duration: int?
   CPU_Screen_Limit: int?
 
