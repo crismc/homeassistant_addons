@@ -10,9 +10,9 @@ Enables 128x32 pixel OLED for Raspberry Pi (both 32 and 64bit).
 <br>
 
 ## Some Teaser Screenshots.
-| Welcome | HA Splash | Network Stats | CPU Stats | RAM Stats | Storage Stats | 
-|-----------|-----------|-----------|-----------|---------------|---------------|
-| ![Welcome](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/welcome.png?raw=true) | ![Splash](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/splash.png?raw=true) | ![CPU Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/cpu.png?raw=true) | ![RAM Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/memory.png?raw=true) | ![Storage Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/storage.png?raw=true) | ![Network Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/network.png?raw=true)
+| Welcome | HA Splash | Network Stats | CPU Stats | RAM Stats | Storage Stats | Exit Screen | 
+|-----------|-----------|-----------|-----------|---------------|---------------|---------------|
+| ![Welcome](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/welcome.png?raw=true) | ![Splash](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/splash.png?raw=true) | ![CPU Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/cpu.png?raw=true) | ![RAM Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/memory.png?raw=true) | ![Storage Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/storage.png?raw=true) | ![Network Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/network.png?raw=true) | ![Goodbye](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/static_goodbye.png?raw=true)
 
 <br>
 
