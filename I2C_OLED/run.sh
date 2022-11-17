@@ -5,8 +5,8 @@ bashio::log.info "Starting I2C OLED App..."
 I2C_BUS="$(bashio::config 'I2C_bus')"
 DEBUG="$(bashio::config 'Debug_Mode')"
 OPTIONS=""
-if [ "$(bashio::config 'Debug_Mode')" ]; then
-    bashio::log.info "Debug mode set to True";
+if [ "${DEBUG}" = "true" ]; then
+    bashio::log.info "Debug mode set to ${DEBUG}";
     OPTIONS="-d"
 fi
 
@@ -16,7 +16,6 @@ if ls /dev/i2c-$I2C_BUS; then
     bashio::log.info "Display Info to OLED"
     bashio::log.info "Running 'python3 display.py $OPTIONS -c $CONFIG_PATH'"
     cd /I2C_OLED
-
 
     python3 display.py $OPTIONS -c $CONFIG_PATH
 else

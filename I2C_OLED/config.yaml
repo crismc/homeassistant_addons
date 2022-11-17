@@ -40,7 +40,7 @@ devices:
 options:
   Default_Duration: 10
   I2C_bus: 1
-  Screenshot: '/media'
+  Screenshot: ''
 
   Debug_Mode: false
 
@@ -72,30 +72,30 @@ options:
 schema:
   I2C_bus: "int(0,20)"
   Default_Duration: int
-  Screenshot: "str?"
+  Screenshot: "list(|/media)"
   Debug_Mode: bool
 
   Show_Welcome_Screen: bool
-  Welcome_Screen_Duration: int?
-  Welcome_Screen_Limit: int?
+  Welcome_Screen_Duration: "int?"
+  Welcome_Screen_Limit: "int?"
 
   Show_Splash_Screen: bool
-  Splash_Screen_Duration: int?
-  Splash_Screen_Limit: int?
+  Splash_Screen_Duration: "int?"
+  Splash_Screen_Limit: "int?"
 
   Show_Network_Screen: bool
-  Network_Screen_Duration: int?
-  Network_Screen_Limit: int?
+  Network_Screen_Duration: "int?"
+  Network_Screen_Limit: "int?"
 
   Show_CPU_Screen: bool
   Temperature_Unit: "list(C|F)?"
-  CPU_Screen_Duration: int?
-  CPU_Screen_Limit: int?
+  CPU_Screen_Duration: "int?"
+  CPU_Screen_Limit: "int?"
 
   Show_Memory_Screen: bool
-  Memory_Screen_Duration: int?
-  Memory_Screen_Limit: int?
+  Memory_Screen_Duration: "int?"
+  Memory_Screen_Limit: "int?"
 
   Show_Storage_Screen: bool
-  Storage_Screen_Duration: int?
-  Storage_Screen_Limit: int?
+  Storage_Screen_Duration: "int?"
+  Storage_Screen_Limit: "int?"

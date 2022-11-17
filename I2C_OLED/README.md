@@ -10,9 +10,9 @@ Enables 128x32 pixel OLED for Raspberry Pi (both 32 and 64bit).
 <br>
 
 ## Some Teaser Screenshots.
-| Welcome | CPU Stats | RAM Stats | Storage Stats | Network Stats | 
-|-----------|-----------|-----------|---------------|---------------|
-| ![CPU Stats][welcome-url] | ![CPU Stats][cpu-stats-url] | ![RAM Stats][ram-stats-url] | ![Storage Stats][storage-stats-url] | ![Network Stats][network-stats-url]
+| Welcome | HA Splash | Network Stats | CPU Stats | RAM Stats | Storage Stats | 
+|-----------|-----------|-----------|-----------|---------------|---------------|
+| ![Welcome](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/welcome.png?raw=true) | ![Splash](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/splash.png?raw=true) | ![CPU Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/cpu.png?raw=true) | ![RAM Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/memory.png?raw=true) | ![Storage Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/storage.png?raw=true) | ![Network Stats](https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/network.png?raw=true)
 
 <br>
 
@@ -93,6 +93,8 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 | Name                 | Type    | Requirement  | Description                                            | Default             |
 | ---------------------| ------- | ------------ | -------------------------------------------------------| ------------------- |
 | I2C_bus     | int  | **Required** | The bus number of the targeted i2c device (/dev/i2c-[ number ])                  | `1`                 |
+| Debug_Mode     | bool  | **Optional** | Weather to enable debugging output in the logs                  | `false`                 |
+| Screenshot     | string  | **Optional** | Capture a screenshot of each screen. Only value currently accepted is ```/media``` Saved to /media/[screen_name].png  | `null`                 |
 | Temperature_Unit     | string  | **Required** | Display the CPU temperature in C or F                  | `C`                 |
 | Default_Duration     | int     | **Required** | How long in seconds to display each screen by default. Ignored if specified on specific screen  | `10`                |
 | Show_Welcome_Screen  | boolean | **Required** | Show the animated Welcome to `hostname` screen         | `true`              |
@@ -117,8 +119,3 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 [home-assistant-docs-url]: https://www.home-assistant.io/common-tasks/os#enable-i2c-with-an-sd-card-reader
 [hassosconfigurator-url]: https://github.com/adamoutler/HassOSConfigurator/tree/main/Pi4EnableI2C
 [release-url]: https://github.com/crismc/rpi_i2c_oled/releases
-[welcome-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/welcome.png?raw=true
-[cpu-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/cpu.png?raw=true
-[ram-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/memory.png?raw=true
-[storage-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/storage.png?raw=true
-[network-stats-url]: https://github.com/crismc/rpi_i2c_oled/blob/master/img/examples/network.png?raw=true
