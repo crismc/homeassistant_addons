@@ -1,0 +1,98 @@
+configuration:
+  Default_Duration:
+    name: Default Duration
+    description: >-
+      This option allows you to set the default duration in seconds to display each screen.
+      This option is ignored for screens which have overriding durations declared
+  I2C_bus:
+    name: I2C Bus Number
+    description: >-
+      Bus number of your I2C device. 
+      This is typically 1 (/dev/i2c-1), but on occasions devices may report this as 0 (/dev/i2c-0).
+  Screenshot:
+    name: Screenshot Capture Path
+    description: >-
+      Capture a screenshot of each screen as it iterates to /media/[screen_name].png
+      To see if images are captured, enable debugging.
+  Debug_Mode:
+    name: Debug Mode
+    description: >-
+      Enable debugging for the service by printing info logs to the addon log.
+  Show_Welcome_Screen:
+    name: Show Welcome Screen
+    description: >-
+      When on, shows an animated 'Welcome to `hostname`' screen
+  Welcome_Screen_Duration:
+    name: Welcome Screen Duration
+    description: >-
+      How long in seconds to show the Welcome Screen
+  Welcome_Screen_Limit:
+    name: Welcome Screen Max Limit
+    description: >-
+      Numer of times to allow the Welcome Screen to appear.
+      e.g. if set to 2, the Welcome Screen will only appear 2 times
+  Show_Splash_Screen:
+    name: Show Home Assistant Splash Screen
+    description: >-
+      When on, shows the current version of Home Assistant OS and core.
+      An asterisk will be presented if either require an upgrade.
+  Splash_Screen_Duration:
+    name: Home Assistant Splash Screen Duration
+    description: >-
+      How long in seconds to show the Home Assistant Splash Screen
+  Splash_Screen_Limit:
+    name: Home Assistant Splash Screen Max Limit
+    description: >-
+      Numer of times to allow the Home Assistant Splash Screen to appear.
+  Show_Network_Screen:
+    name: Show Network Information Screen
+    description: >-
+      When on, shows the host IP and Hostname.
+  Network_Screen_Duration:
+    name: Network Screen Duration
+    description: >-
+      How long in seconds to show the Network Screen
+  Network_Screen_Limit:
+    name: Network Screen Max Limit
+    description: >-
+      Numer of times to allow the Network Screen to appear.
+  Show_CPU_Screen:
+    name: Show CPU Stats Screen
+    description: >-
+      When on, shows the CPU stats such as temperature, load and uptime.
+  Temperature_Unit:
+    name: Temperature Unit
+    description: >-
+      Show the CPU temperature in either C (Celsius) or F (Fahrenheit) Screen
+  CPU_Screen_Duration:
+    name: CPU Screen Duration
+    description: >-
+      How long in seconds to show the CPU Screen
+  CPU_Screen_Limit:
+    name: CPU Screen Max Limit
+    description: >-
+      Numer of times to allow the CPU Screen to appear.
+  Show_Memory_Screen:
+    name: Show Memory Information Screen
+    description: >-
+      When on, shows memory stats, such as amount used, total and utilisation
+  Memory_Screen_Duration:
+    name: Memory Screen Duration
+    description: >-
+      How long in seconds to show the Memory Information Screen
+  Memory_Screen_Limit:
+    name: Memory Screen Max Limit
+    description: >-
+      Numer of times to allow the Memory Information Screen to appear.
+  Show_Storage_Screen:
+    name: Show Storage Information Screen
+    description: >-
+      When on, shows storage stats, such as amount used, total and utilisation
+  Storage_Screen_Duration:
+    name: Storage Screen Duration
+    description: >-
+      How long in seconds to show the Storage Information Screen
+  Storage_Screen_Limit:
+    name: Storage Screen Max Limit
+    description: >-
+      Numer of times to allow the Storage Information Screen to appear.
