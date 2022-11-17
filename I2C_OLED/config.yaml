@@ -6,6 +6,8 @@ startup: services
 boot: manual
 hassio_api: true
 init: false
+ingress: true
+auth_api: true
 arch:
   - aarch64
   - amd64
@@ -14,7 +16,6 @@ arch:
   - i386
 map:
   - media:rw
-full_access: true
 devices:
   - /dev/i2c-0
   - /dev/i2c-1
