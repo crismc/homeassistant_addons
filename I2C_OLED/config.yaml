@@ -41,41 +41,43 @@ devices:
 options:
   Default_Duration: 10
   I2C_bus: 1
+  Debug_Mode: false
   Screenshot: ''
 
-  Debug_Mode: false
 
-  DateTime_Format: "%d/%m/%Y %H:%M:%S"
   Graceful_Exit_Text: "Exited at {datetime}"
+  Scroll_Amplitude: 6
 
   Show_Static_Screen: true
-  Static_Screen_Text: "Hassio verion {hassio.os.version} on {hostname} with IP {ip}"
-  Static_Screen_Text_NoScroll: false
-  Static_Screen_Text_Animated_Wave: 8
-
   Show_Welcome_Screen: true
+  Show_Splash_Screen: true
+  Show_Network_Screen: true
+  Show_CPU_Screen: true
+  Show_Memory_Screen: true
+  Show_Storage_Screen: true
+  
+  Static_Screen_Text: "Hassio verion {hassio.os.version} on {hostname} with IP {ip}"
+  Welcome_Screen_Text: "Welcome to {hostname}"
+  
+  DateTime_Format: "%d/%m/%Y %H:%M:%S"
+  Static_Screen_Text_NoScroll: false
+
   Welcome_Screen_Duration: 5
   Welcome_Screen_Limit: 2
-  Welcome_Screen_Text: "Welcome to {hostname}"
 
-  Show_Splash_Screen: true
   Splash_Screen_Duration: 5
   Splash_Screen_Limit: 0
 
-  Show_Network_Screen: true
   Network_Screen_Duration: 10
   Network_Screen_Limit: 0
 
-  Show_CPU_Screen: true
   Temperature_Unit: "C"
   CPU_Screen_Duration: 5
   CPU_Screen_Limit: 0
 
-  Show_Memory_Screen: true
   Memory_Screen_Duration: 5
   Memory_Screen_Limit: 0
 
-  Show_Storage_Screen: true
   Storage_Screen_Duration: 5
   Storage_Screen_Limit: 0
 
@@ -90,7 +92,7 @@ schema:
   Show_Static_Screen: bool
   Static_Screen_Text: "str?"
   Static_Screen_Text_NoScroll: bool
-  Static_Screen_Text_Animated_Wave: "int?"
+  Scroll_Amplitude: "int?"
 
   Show_Welcome_Screen: bool
   Welcome_Screen_Text: "str?"

@@ -38,10 +38,10 @@ configuration:
     name: Prevent Custom Screen Scrolling
     description: >-
       Disable the scrolling animation if the static text its too large to fit. If set to true, make a best effort to stack the text as centered lines	
-  Static_Screen_Text_Animated_Wave:
-    name: Customer Screen Scrolling Wave Amount
+  Scroll_Amplitude:
+    name: Scrolling Height Amplitude
     description: >-
-      Amount of wave action the custom text scrolling animation has. The bigger the number, the bigger the wave.	
+      Amount of wave action the text scrolling animation has. The bigger the number, the bigger the wave.	
   Show_Welcome_Screen:
     name: Show Welcome Screen
     description: >-
