@@ -39,15 +39,6 @@ devices:
   - /dev/i2c-19
   - /dev/i2c-20
 options:
-  Default_Duration: 10
-  I2C_bus: 1
-  Debug_Mode: false
-  Screenshot: ''
-
-
-  Graceful_Exit_Text: "Exited at {datetime}"
-  Scroll_Amplitude: 6
-
   Show_Static_Screen: true
   Show_Welcome_Screen: true
   Show_Splash_Screen: true
@@ -55,12 +46,16 @@ options:
   Show_CPU_Screen: true
   Show_Memory_Screen: true
   Show_Storage_Screen: true
-  
-  Static_Screen_Text: "Hassio verion {hassio.os.version} on {hostname} with IP {ip}"
+
   Welcome_Screen_Text: "Welcome to {hostname}"
-  
+  Static_Screen_Text: "Hassio verion {hassio.os.version} on {hostname} with IP {ip}"
+  Graceful_Exit_Text: "Exited at {datetime}"
+
+  Default_Duration: 10
+  Scroll_Amplitude: 6
   DateTime_Format: "%d/%m/%Y %H:%M:%S"
   Static_Screen_Text_NoScroll: false
+  Temperature_Unit: "C"
 
   Welcome_Screen_Duration: 5
   Welcome_Screen_Limit: 2
@@ -71,7 +66,6 @@ options:
   Network_Screen_Duration: 10
   Network_Screen_Limit: 0
 
-  Temperature_Unit: "C"
   CPU_Screen_Duration: 5
   CPU_Screen_Limit: 0
 
@@ -81,41 +75,47 @@ options:
   Storage_Screen_Duration: 5
   Storage_Screen_Limit: 0
 
+  Debug_Mode: false
+  I2C_bus: 1
+  Screenshot: ''
+
 schema:
-  I2C_bus: "int(0,20)"
-  Default_Duration: int
-  Screenshot: "list(|/media)"
-  Debug_Mode: bool
-  DateTime_Format: "str?"
-  Graceful_Exit_Text: "str?"
-
   Show_Static_Screen: bool
-  Static_Screen_Text: "str?"
-  Static_Screen_Text_NoScroll: bool
-  Scroll_Amplitude: "int?"
-
   Show_Welcome_Screen: bool
+  Show_Splash_Screen: bool
+  Show_Network_Screen: bool
+  Show_CPU_Screen: bool
+  Show_Memory_Screen: bool
+  Show_Storage_Screen: bool
+
   Welcome_Screen_Text: "str?"
+  Static_Screen_Text: "str?"
+  Graceful_Exit_Text: "str?"
+ 
+  Default_Duration: int
+  Scroll_Amplitude: "int?"
+  DateTime_Format: "str?"
+  Static_Screen_Text_NoScroll: bool
+  Temperature_Unit: "list(C|F)?"
+
   Welcome_Screen_Duration: "int?"
   Welcome_Screen_Limit: "int?"
 
-  Show_Splash_Screen: bool
   Splash_Screen_Duration: "int?"
   Splash_Screen_Limit: "int?"
 
-  Show_Network_Screen: bool
   Network_Screen_Duration: "int?"
   Network_Screen_Limit: "int?"
 
-  Show_CPU_Screen: bool
-  Temperature_Unit: "list(C|F)?"
   CPU_Screen_Duration: "int?"
   CPU_Screen_Limit: "int?"
 
-  Show_Memory_Screen: bool
   Memory_Screen_Duration: "int?"
   Memory_Screen_Limit: "int?"
 
-  Show_Storage_Screen: bool
   Storage_Screen_Duration: "int?"
   Storage_Screen_Limit: "int?"
+
+  Debug_Mode: bool
+  I2C_bus: "int(0,20)"
+  Screenshot: "list(|/media)"
