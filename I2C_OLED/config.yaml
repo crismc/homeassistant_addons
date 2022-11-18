@@ -84,16 +84,16 @@ schema:
   Default_Duration: int
   Screenshot: "list(|/media)"
   Debug_Mode: bool
-  DateTime_Format: "string?"
-  Graceful_Exit_Text: "string?"
+  DateTime_Format: "str?"
+  Graceful_Exit_Text: "str?"
 
   Show_Static_Screen: bool
-  Static_Screen_Text: "string?"
+  Static_Screen_Text: "str?"
   Static_Screen_Text_NoScroll: bool
   Static_Screen_Text_Animated_Wave: "int?"
 
   Show_Welcome_Screen: bool
-  Welcome_Screen_Text: "string?"
+  Welcome_Screen_Text: "str?"
   Welcome_Screen_Duration: "int?"
   Welcome_Screen_Limit: "int?"
 
