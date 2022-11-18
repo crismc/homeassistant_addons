@@ -18,10 +18,38 @@ configuration:
     name: Debug Mode
     description: >-
       Enable debugging for the service by printing info logs to the addon log.
+  DateTime_Format:
+    name: Date Time Format
+    description: >-
+      Format of the {datetime} static text variable	
+  Graceful_Exit_Text:
+    name: Stop Screen Text
+    description: >-
+      Text to display when the service is exited. Accepts same variables as the custom screen.
+  Show_Static_Screen:
+    name: Show Custom Screen
+    description: >-
+      Show the static screen with the specified custom text
+  Static_Screen_Text:
+    name: Custom Screen Text
+    description: >-
+      Text to display when the Show_Static_Screen is enabled. Accepts all static text variables.
+  Static_Screen_Text_NoScroll:
+    name: Prevent Custom Screen Scrolling
+    description: >-
+      Disable the scrolling animation if the static text its too large to fit. If set to true, make a best effort to stack the text as centered lines	
+  Static_Screen_Text_Animated_Wave:
+    name: Customer Screen Scrolling Wave Amount
+    description: >-
+      Amount of wave action the custom text scrolling animation has. The bigger the number, the bigger the wave.	
   Show_Welcome_Screen:
     name: Show Welcome Screen
     description: >-
       When on, shows an animated 'Welcome to `hostname`' screen
+  Welcome_Screen_Text:
+    name: Welcome Screen Text
+    description: >-
+      Text to display when the Show_Welcome_Screen is enabled. Accepts all static text variables.	
   Welcome_Screen_Duration:
     name: Welcome Screen Duration
     description: >-

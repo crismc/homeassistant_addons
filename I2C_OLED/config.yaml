@@ -1,6 +1,6 @@
 name: "I2C OLED Display"
 description: "This addon lets you display to your I2C OLED for a Raspberry Pi with an I2C SSD1306 0.91\" 128x32 OLED."
-version: "1.0.1"
+version: "1.0.2"
 slug: "i2c_oled_display"
 startup: services
 boot: manual
@@ -45,9 +45,18 @@ options:
 
   Debug_Mode: false
 
+  DateTime_Format: "%d/%m/%Y %H:%M:%S"
+  Graceful_Exit_Text: "Exited at {datetime}"
+
+  Show_Static_Screen: true
+  Static_Screen_Text: "Hassio verion {hassio.os.version} on {hostname} with IP {ip}"
+  Static_Screen_Text_NoScroll: false
+  Static_Screen_Text_Animated_Wave: 8
+
   Show_Welcome_Screen: true
   Welcome_Screen_Duration: 5
   Welcome_Screen_Limit: 2
+  Welcome_Screen_Text: "Welcome to {hostname}"
 
   Show_Splash_Screen: true
   Splash_Screen_Duration: 5
@@ -75,8 +84,16 @@ schema:
   Default_Duration: int
   Screenshot: "list(|/media)"
   Debug_Mode: bool
+  DateTime_Format: "string?"
+  Graceful_Exit_Text: "string?"
+
+  Show_Static_Screen: bool
+  Static_Screen_Text: "string?"
+  Static_Screen_Text_NoScroll: bool
+  Static_Screen_Text_Animated_Wave: "int?"
 
   Show_Welcome_Screen: bool
+  Welcome_Screen_Text: "string?"
   Welcome_Screen_Duration: "int?"
   Welcome_Screen_Limit: "int?"
 
