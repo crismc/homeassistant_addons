@@ -1,6 +1,6 @@
 name: "I2C OLED Display"
 description: "This addon lets you display to your I2C OLED for a Raspberry Pi with an I2C SSD1306 0.91\" 128x32 OLED."
-version: "1.0.2"
+version: "1.0.3"
 slug: "i2c_oled_display"
 startup: services
 boot: manual
@@ -56,6 +56,7 @@ options:
   DateTime_Format: "%d/%m/%Y %H:%M:%S"
   Static_Screen_Text_NoScroll: false
   Temperature_Unit: "C"
+  Rotate: 0
 
   Welcome_Screen_Duration: 5
   Welcome_Screen_Limit: 2
@@ -97,6 +98,7 @@ schema:
   DateTime_Format: "str?"
   Static_Screen_Text_NoScroll: bool
   Temperature_Unit: "list(C|F)?"
+  Rotate: "int?"
 
   Welcome_Screen_Duration: "int?"
   Welcome_Screen_Limit: "int?"
