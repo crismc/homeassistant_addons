@@ -63,6 +63,10 @@ configuration:
     name: Temperature Unit
     description: >-
       Show the CPU temperature in either C (Celsius) or F (Fahrenheit) Screen
+  Rotate:
+    name: Rotate Screen
+    description: >-
+      Number of degrees to rotate the screen counter clockwise from the centre
   
   Welcome_Screen_Duration:
     name: Welcome Screen Duration

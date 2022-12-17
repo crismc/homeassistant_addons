@@ -119,6 +119,7 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 | Debug_Mode     | bool  | **Optional** | Weather to enable debugging output in the logs                  | `false`                 |
 | Screenshot     | string  | **Optional** | Capture a screenshot of each screen. Only value currently accepted is ```/media``` Saved to /media/[screen_name].png  | `null`                 |
 | Temperature_Unit     | string  | **Required** | Display the CPU temperature in C or F                  | `C`                 |
+| Rotate     | int  | **Optional** | Number of degrees to rotate the screen counter clockwise from the centre                  | `0`                 |
 | Default_Duration     | int     | **Required** | How long in seconds to display each screen by default. Ignored if specified on specific screen  | `10`                |
 | DateTime_Format      | string  | **Optional** | Format of the ```{datetime}``` static text variable  | `%d/%m/%Y %H:%M:%S` |
 | Graceful_Exit_Text   | string  | **Optional** | Text to display when the service is exited. Accepts same variables as the custom screen.  | `Exited at {datetime}` |
