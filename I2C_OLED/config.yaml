@@ -1,6 +1,6 @@
 name: "I2C OLED Display"
 description: "This addon lets you display to your I2C OLED for a Raspberry Pi with an I2C SSD1306 0.91\" 128x32 OLED."
-version: "1.0.4"
+version: "1.0.5"
 slug: "i2c_oled_display"
 startup: services
 boot: manual
