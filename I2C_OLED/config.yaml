@@ -6,7 +6,6 @@ startup: services
 boot: manual
 hassio_api: true
 init: false
-ingress: true
 auth_api: true
 arch:
   - aarch64
