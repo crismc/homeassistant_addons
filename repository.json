@@ -1,5 +1,5 @@
 {
-    "name": "Home Assistant Add-ons:",
-    "url": "https://github.com/crismc/homeassistant_addons",
-    "maintainer": "Chris Churchill <chris@serva.co.uk>"
+    "name": "HA Add-ons:",
+    "url": "https://github.com/RoLuWa/rpi_i2c_oled_128.64",
+    "maintainer": "Roland Lupp <rlupp@arcor.de>"
 }
